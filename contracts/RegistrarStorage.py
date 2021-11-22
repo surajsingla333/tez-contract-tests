@@ -35,7 +35,7 @@ class RegistrarStorage(sp.Contract):
             isAddressTaken=sp.map(),
             totalRegistrars=0,
             totalSafleIdRegistered=0,
-            auctionContractAddress=sp.address("tz1"),
+            auctionContractAddress=sp.address("KT18amZmM5W7qDWVt2pH6uj7sCEd3kbzLrHT"),
             resolveOldSafleIdFromAddress=sp.map(
                 tkey=sp.TAddress,
                 tvalue=sp.TList(sp.TBytes)
@@ -287,3 +287,10 @@ class RegistrarStorage(sp.Contract):
     @sp.onchain_view()
     def idToCoinAddress(self, params):
         sp.result(self.data.safleIdToCoinAddress[params._safleId][params._index])
+
+sp.add_compilation_target("RegistrarStorage", RegistrarStorage(_ownerAddress=sp.address("tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV"), _mainContractAddress=sp.address("KT1R12Yq5dVYsS9qSuLVTxXQ6jXnGHySkbxx")))
+
+@sp.add_test(name="SafleID Storage")
+def test():
+    scenario = sp.test_scenario()
+    scenario.h1("Safle Storage")

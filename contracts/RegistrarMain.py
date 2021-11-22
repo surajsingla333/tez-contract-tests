@@ -7,7 +7,7 @@ class CheckingContract(sp.Contract):
 
     @sp.global_lambda
     def isContract(address):
-        sp.result((address < sp.address("tz1Ke2h7sDdakHJQh8WX4Z372du1KChsksyU")) & (address > sp.address("KT18amZmM5W7qDWVt2pH6uj7sCEd3kbzLrHT")))
+        sp.result((address < sp.address("tz1Ke2h7sDdakHJQh8WX4Z372du1KChsksyU")) & (address >= sp.address("KT18amZmM5W7qDWVt2pH6uj7sCEd3kbzLrHT")))
 
     @sp.global_lambda
     def toLower(string):
@@ -35,14 +35,13 @@ class CheckingContract(sp.Contract):
         sp.for idx in sp.range(0, sp.len(_registrarName)):
             sp.verify(alphaNumericCharacters.contains(sp.slice(_registrarName, idx, 1).open_some()), "Only alphanumeric allowed in blockchain name and alias name")
 
-
 class RegistrarMain(CheckingContract):
     def __init__(self, _ownerAddress, _walletAddress):
         self.init(
             contractOwner=_ownerAddress,
             walletAddress=_walletAddress,
             safleIdRegStatus=False,
-            registrarStorageContractAddress=sp.address("tz1"),
+            registrarStorageContractAddress=sp.address("KT18amZmM5W7qDWVt2pH6uj7sCEd3kbzLrHT"),
             safleIdFees=sp.mutez(0),
             registrarFees=sp.mutez(0),
             storageContractAddress=False
@@ -64,11 +63,6 @@ class RegistrarMain(CheckingContract):
     def safleIdChecks(self, _safleId):
         sp.verify(sp.amount >= self.data.safleIdFees, "Registration fees not matched.")
         self.isSafleIdValid(_safleId)
-
-    @sp.entry_point
-    def setOwner(self):
-        sp.verify(self.data.contractOwner == sp.address("tz1"), "Owner can be set only once.")
-        self.data.contractOwner = sp.sender
 
     @sp.entry_point
     def setSafleIdFees(self, params):
@@ -289,7 +283,7 @@ class RegistrarMain(CheckingContract):
             registrarStorageContract
         )
 
-sp.add_compilation_target("RegistrarMain", RegistrarMain(_ownerAddress=sp.address("tz1LWW9Qebwm7xW1c8DoH87B3U7doCPWBo9f"), _walletAddress=sp.address("tz1LWW9Qebwm7xW1c8DoH87B3U7doCPWBo9f")))
+sp.add_compilation_target("RegistrarMain", RegistrarMain(_ownerAddress=sp.address("tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV"), _walletAddress=sp.address("tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV")))
 
 @sp.add_test(name="SafleID Main")
 def test():

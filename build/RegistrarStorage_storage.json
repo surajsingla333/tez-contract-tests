@@ -1,0 +1,37 @@
+{
+  "prim": "Pair",
+  "args": [
+    {
+      "prim": "Pair",
+      "args": [
+        {
+          "prim": "Pair",
+          "args": [
+            { "prim": "Pair", "args": [ [], [] ] },
+            { "prim": "Pair", "args": [ { "string": "KT18amZmM5W7qDWVt2pH6uj7sCEd3kbzLrHT" }, { "prim": "Pair", "args": [ [], [] ] } ] }
+          ]
+        },
+        {
+          "prim": "Pair",
+          "args": [
+            { "prim": "Pair", "args": [ { "string": "tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV" }, [] ] },
+            { "prim": "Pair", "args": [ [], { "prim": "Pair", "args": [ { "string": "KT1R12Yq5dVYsS9qSuLVTxXQ6jXnGHySkbxx" }, [] ] } ] }
+          ]
+        }
+      ]
+    },
+    {
+      "prim": "Pair",
+      "args": [
+        { "prim": "Pair", "args": [ { "prim": "Pair", "args": [ [], [] ] }, { "prim": "Pair", "args": [ [], { "prim": "Pair", "args": [ [], [] ] } ] } ] },
+        {
+          "prim": "Pair",
+          "args": [
+            { "prim": "Pair", "args": [ [], { "prim": "Pair", "args": [ [], { "int": "0" } ] } ] },
+            { "prim": "Pair", "args": [ [], { "prim": "Pair", "args": [ { "int": "0" }, [] ] } ] }
+          ]
+        }
+      ]
+    }
+  ]
+}
