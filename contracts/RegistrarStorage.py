@@ -288,7 +288,7 @@ class RegistrarStorage(sp.Contract):
     def idToCoinAddress(self, params):
         sp.result(self.data.safleIdToCoinAddress[params._safleId][params._index])
 
-sp.add_compilation_target("RegistrarStorage", RegistrarStorage(_ownerAddress=sp.address("tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV"), _mainContractAddress=sp.address("KT1R12Yq5dVYsS9qSuLVTxXQ6jXnGHySkbxx")))
+sp.add_compilation_target("RegistrarStorage", RegistrarStorage(_ownerAddress=sp.address("tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV"), _mainContractAddress=sp.address("KT1CgivcuoBSvub3JAPaVGQUGBLCXHhBhX9o")))
 
 @sp.add_test(name="SafleID Storage")
 def test():

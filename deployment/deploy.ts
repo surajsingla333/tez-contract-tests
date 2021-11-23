@@ -8,9 +8,12 @@ const deploy = async () => {
   //   const { TEZOS_RPC_URL, ORIGINATOR_PRIVATE_KEY } = process.env;
 
   // const TEZOS_RPC_URL = "https://granadanet.api.tez.ie";
-  const TEZOS_RPC_URL = "https://granadanet.smartpy.io/";
+  // const TEZOS_RPC_URL = "https://granadanet.smartpy.io/";
+  const TEZOS_RPC_URL = "https://hangzhounet.api.tez.ie";
+  // const TEZOS_RPC_URL = "https://granadanet.smartpy.io/";
   const ORIGINATOR_PRIVATE_KEY =
-    "edskS8un6ip9hX8UW74Xhv1Mkd8JwtqFEyNL1exQf2MaFxPLUEcKGvXVV2oXsNu6ntThG399fkp1rDXNj5uqX9tAh9w4jpfADb";
+  "edskS1iD24NRtKU2D3mU4oiLXcLkbiXFDgtoePZWsN6AmDPKP1apXQXzMw4C81diawkbyNj9Q6qe9ow4frznq4HE5NbRsZwH4a"; //tz1TrhzPxJtyYX4sdh2Qg6kCkPCFvVXmQJXB
+    // "edskS8un6ip9hX8UW74Xhv1Mkd8JwtqFEyNL1exQf2MaFxPLUEcKGvXVV2oXsNu6ntThG399fkp1rDXNj5uqX9tAh9w4jpfADb"; //  tz1fMtL9YQekxj36AHWuDWtud5LosvtDunXk
   console.log(TEZOS_RPC_URL, ORIGINATOR_PRIVATE_KEY);
 
   const signer = await InMemorySigner.fromSecretKey(ORIGINATOR_PRIVATE_KEY);

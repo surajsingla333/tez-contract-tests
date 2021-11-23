@@ -15,7 +15,7 @@
           "prim": "Pair",
           "args": [
             { "prim": "Pair", "args": [ { "string": "tz1VVhDEgXSHNFcDmKpKeujvJ6dV7kcSqbAV" }, [] ] },
-            { "prim": "Pair", "args": [ [], { "prim": "Pair", "args": [ { "string": "KT1R12Yq5dVYsS9qSuLVTxXQ6jXnGHySkbxx" }, [] ] } ] }
+            { "prim": "Pair", "args": [ [], { "prim": "Pair", "args": [ { "string": "KT1CgivcuoBSvub3JAPaVGQUGBLCXHhBhX9o" }, [] ] } ] }
           ]
         }
       ]
